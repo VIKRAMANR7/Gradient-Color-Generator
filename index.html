@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gradient Color Generator</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+    <script defer src="./script.js"></script>
+  </head>
+  <body>
+    <div
+      class="w-full min-h-screen bg-violet-500 flex justify-center items-center"
+    >
+      <div
+        class="w-[500px] h-auto bg-white p-[40px] rounded-[15px] text-[20px] font-semibold"
+      >
+        <div
+          class="w-full h-[300px] rounded-[15px] pb-[25px] bg-[linear-gradient(to_top_left,#5485E4,#A271F8)] gradient-box"
+        ></div>
+        <div class="flex justify-between items-center">
+          <div class="pt-[15px] wrapper">
+            <label for="direction">Direction</label>
+            <div class="select-wrapper">
+              <select
+                class="block border border-2 border-gray-300 py-[10px] px-[15px] appearance-none rounded-md mt-[5px] outline-none cursor-pointer direction"
+              >
+                <option value="to top">Top</option>
+                <option value="to right top">Right Top</option>
+                <option value="to right">Right</option>
+                <option value="to right bottom">Right Bottom</option>
+                <option value="to bottom">Bottom</option>
+                <option value="to left bottom">Left Bottom</option>
+                <option value="to left">Left</option>
+                <option value="to left top">Left Top</option>
+              </select>
+            </div>
+          </div>
+          <div class="wrapper">
+            <label for="colors">Colors</label>
+            <div class="mt-[5px]">
+              <input
+                type="color"
+                id="primary-color"
+                value="#5485E4"
+                class="w-[70px] h-[50px] border border-gray-500 rounded-sm colors"
+              />
+              <input
+                type="color"
+                value="#A271F8"
+                id="secondary-color"
+                class="w-[70px] h-[50px] border border-gray-500 rounded-sm ml-[10px] colors"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="py-[15px] mt-[10px] box">
+          <textarea
+            rows="2"
+            id="result"
+            disabled
+            class="w-full h-[80px] border border-2 border-gray-300 rounded-md cursor-pointer outline-none pl-[10px] pt-[5px] text-[16px] resize-none"
+          >
+background: linear-gradient(to left top,#5485E4,#A271F8)</textarea
+          >
+        </div>
+        <div class="btns flex justify-between">
+          <button
+            class="py-[15px] px-[25px] bg-gray-600 text-white font-semibold rounded-md refresh"
+          >
+            Refresh Colors
+          </button>
+          <button
+            class="py-[15px] px-[25px] bg-violet-500 text-white font-semibold rounded-md copy"
+          >
+            Copy Code
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
